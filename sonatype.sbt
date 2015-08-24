@@ -1,4 +1,4 @@
-description := "TODO"
+description := "Circular ProgressBar for (Scala on) Android"
 
 homepage := Some( url( "https://github.com/taig/donutprogress" ) )
 
