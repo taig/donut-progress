@@ -45,4 +45,6 @@ scmInfo := Some(
     )
 )
 
+sonatypeProfileName := "io.taig"
+
 startYear := Some( 2015 )

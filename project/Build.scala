@@ -15,6 +15,7 @@ object Build extends sbt.Build {
                 "com.android.support" % "appcompat-v7" % "23.0.0" ::
                 Nil,
             name := "DonutProgress",
+            normalizedName := "donut-progress",
             organization := "io.taig.android",
             scalaVersion := "2.11.7",
             scalacOptions ++=
