@@ -316,11 +316,9 @@ case class CircleProgress( attrs: AttributeSet = null, style: Int = 0 )( implici
         } )
     }
 
-    override def onSaveInstanceState() = {
-        val state = new CircleProgressState( super.onSaveInstanceState() )
-        state.current = progress.current
-        state.max = progress.max
-        state
+    override def onSaveInstanceState() = new CircleProgressState( super.onSaveInstanceState() ) {
+        current = progress.current
+        max = progress.max
     }
 
     override def onRestoreInstanceState( state: Parcelable ) = state match {
