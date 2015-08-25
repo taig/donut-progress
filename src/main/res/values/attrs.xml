@@ -13,6 +13,12 @@
         <attr format="integer"
               name="donut_progress_current" />
 
+        <attr format="integer"
+              name="donut_progress_max" />
+
+        <attr format="dimension"
+              name="donut_progress_thickness" />
+
         <attr format="color"
               name="donut_progress_labelColorDefault" />
 
@@ -21,12 +27,6 @@
 
         <attr format="dimension"
               name="donut_progress_labelSize" />
-
-        <attr format="integer"
-              name="donut_progress_max" />
-
-        <attr format="dimension"
-              name="donut_progress_thickness" />
 
     </declare-styleable>
 

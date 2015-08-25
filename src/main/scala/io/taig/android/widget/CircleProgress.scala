@@ -111,25 +111,71 @@ case class CircleProgress( attrs: AttributeSet = null, style: Int = 0 )( implici
     def this( context: Context ) = this()( context )
 
     {
-        // Initialize label text color
         val value = new TypedValue()
+
+        // Initialize label text color from theme (if available)
         context.getTheme.resolveAttribute( android.R.attr.textColor, value, true )
 
         if ( value.`type` != TypedValue.TYPE_NULL ) {
             attributes.label.color.default = value.data
         }
 
-    }
-
-    {
         // Initialize progress gradient colors
-        val value = new TypedValue()
-
         context.getTheme.resolveAttribute( R.attr.colorPrimary, value, true )
         attributes.progress.color.start = value.data
 
         context.getTheme.resolveAttribute( R.attr.colorPrimaryDark, value, true )
         attributes.progress.color.end = value.data
+    }
+
+    if ( attrs != null ) {
+        // Process specified custom attributes
+        val array = context.getTheme.obtainStyledAttributes( attrs, R.styleable.CircleProgress, 0, 0 )
+
+        try {
+            progress.color.end = array.getColor(
+                R.styleable.CircleProgress_donut_progress_colorEnd,
+                attributes.progress.color.end
+            )
+
+            progress.color.start = array.getColor(
+                R.styleable.CircleProgress_donut_progress_colorStart,
+                attributes.progress.color.start
+            )
+
+            progress.current = array.getInt(
+                R.styleable.CircleProgress_donut_progress_current,
+                attributes.progress.current
+            )
+
+            progress.max = array.getInt(
+                R.styleable.CircleProgress_donut_progress_max,
+                attributes.progress.max
+            )
+
+            thickness = array.getDimension( R.styleable.CircleProgress_donut_progress_thickness, -1 ) match {
+                case -1    ⇒ None
+                case value ⇒ Some( value )
+            }
+
+            label.color.default = array.getColor(
+                R.styleable.CircleProgress_donut_progress_labelColorDefault,
+                attributes.label.color.default
+            )
+
+            label.color.empty = array.getColor(
+                R.styleable.CircleProgress_donut_progress_labelColorEmpty,
+                attributes.label.color.empty
+            )
+
+            label.size = array.getDimension( R.styleable.CircleProgress_donut_progress_labelSize, -1 ) match {
+                case -1    ⇒ None
+                case value ⇒ Some( value )
+            }
+        }
+        finally {
+            array.recycle()
+        }
     }
 
     object progress {
@@ -154,18 +200,27 @@ case class CircleProgress( attrs: AttributeSet = null, style: Int = 0 )( implici
         def listener = attributes.progress.listener
 
         def max_=( value: Int ) = {
+            require( value >= 0, "Max value must be >= 0" )
+
+            if ( current > value ) {
+                current = value
+            }
+
             attributes.progress.max = max
             attributes.label.text = attributes.label.render()
         }
 
-        def max = attributes.progress.max
+        def max: Int = attributes.progress.max
 
         def current_=( value: Int ) = {
+            require( value >= 0, "Current value must be >= 0" )
+            require( value <= max, "Current value must be <= max" )
+
             attributes.progress.current = value
             attributes.label.text = attributes.label.render()
         }
 
-        def current = attributes.progress.current
+        def current: Int = attributes.progress.current
     }
 
     object label {
