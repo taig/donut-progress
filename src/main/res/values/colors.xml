@@ -2,6 +2,6 @@
 
 <resources>
 
-    <color name="grey">#EDEFF4</color>
+    <color name="donut_progress_background">#EDEFF4</color>
 
 </resources>

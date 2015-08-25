@@ -18,10 +18,10 @@ case class CircleProgress( attrs: AttributeSet = null, style: Int = 0 )( implici
         object color {
             val grey = {
                 if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ) {
-                    context.getColor( R.color.grey )
+                    context.getColor( R.color.donut_progress_background )
                 }
                 else {
-                    context.getResources.getColor( R.color.grey )
+                    context.getResources.getColor( R.color.donut_progress_background )
                 }
             }
 
