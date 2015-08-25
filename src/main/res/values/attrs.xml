@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <declare-styleable name="CircleProgress">
+
+        <attr format="color"
+              name="donut_progress_colorStart" />
+
+        <attr format="color"
+              name="donut_progress_colorEnd" />
+
+        <attr format="integer"
+              name="donut_progress_current" />
+
+        <attr format="color"
+              name="donut_progress_labelColorDefault" />
+
+        <attr format="color"
+              name="donut_progress_labelColorEmpty" />
+
+        <attr format="dimension"
+              name="donut_progress_labelSize" />
+
+        <attr format="integer"
+              name="donut_progress_max" />
+
+        <attr format="dimension"
+              name="donut_progress_thickness" />
+
+    </declare-styleable>
+
+</resources>
