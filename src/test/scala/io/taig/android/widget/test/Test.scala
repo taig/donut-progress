@@ -20,6 +20,10 @@ class Test
     it should "have its max progress set to 100 initially" in {
         new CircleProgress( context ).getMaxProgress shouldBe 100
     }
+    
+    it should "have its progress angle set to 0 initially" in {
+        new CircleProgress( context ).getProgressStartAngle shouldBe 0
+    }
 
     it should "restore the current and max progress after recreation" in {
         val activity = Robolectric.buildActivity( classOf[Activity] ).create( null ).get

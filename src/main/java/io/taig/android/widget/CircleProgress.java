@@ -38,6 +38,8 @@ public class CircleProgress extends View {
 
     private int progressMax;
 
+    private int progressStartAngle;
+
     private OnProgressChangedListener onProgressChangedListener = new OnProgressChangedListener() {
         @Override
         public String update( int current, int max ) {
@@ -124,6 +126,8 @@ public class CircleProgress extends View {
             this.progressCurrent = array.getInt( R.styleable.CircleProgress_donut_progress_current, 0 );
 
             this.progressMax = array.getInt( R.styleable.CircleProgress_donut_progress_max, 100 );
+
+            this.progressStartAngle = array.getInt( R.styleable.CircleProgress_donut_progress_startAngle, 0 );
 
             theme.resolveAttribute( android.R.attr.textColor, value, true );
 
@@ -295,6 +299,34 @@ public class CircleProgress extends View {
 
         progressMax = value;
         labelText = render();
+        invalidate();
+    }
+
+    /**
+     * Get the progress ring start angle
+     * <p/>
+     * The angle defines where the progress ring starts to draw. By default it is set to 0, which is at the top.
+     *
+     * @return Progress ring start angle value
+     */
+    public int getProgressStartAngle() {
+        return progressStartAngle;
+    }
+
+    /**
+     * Set the progress ring start angle
+     * <p/>
+     * The angle defines where the progress ring starts to draw. By default it is set to 0, which is at the top.
+     *
+     * @param value Progress ring start angle value
+     * @throws IllegalArgumentException If value < 0 || value > 360
+     */
+    public void setProgressStartAngle( int value ) {
+        if( value < 0 || value > 360 ) {
+            throw new IllegalArgumentException( "Value must be 0 <= x <= 360" );
+        }
+
+        progressStartAngle = value;
         invalidate();
     }
 
@@ -481,7 +513,7 @@ public class CircleProgress extends View {
         );
 
         canvas.save();
-        canvas.rotate( -90, width / 2f, height / 2f );
+        canvas.rotate( progressStartAngle - 90, width / 2f, height / 2f );
         canvas.drawArc( cacheRect, 0, 360, false, backgroundPaint );
         canvas.drawArc( cacheRect, 0, progress * 360, false, progressPaint );
         canvas.restore();
