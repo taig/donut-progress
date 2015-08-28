@@ -10,15 +10,12 @@
 
 `libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.0"`
 
-### Maven
+### Gradle
 
 ````
-<dependency>
-  <groupId>io.taig.android</groupId>
-  <artifactId>donut-progress</artifactId>
-  <version>1.0.0</version>
-  <type>aar</type>
-</dependency>
+dependencies {
+    compile 'io.taig.android:donut-progress:1.0.0@aar'
+}
 ````
 
 ## Usage
