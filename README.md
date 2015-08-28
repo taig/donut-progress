@@ -8,17 +8,14 @@
 
 ### sbt
 
-`libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.0"`
+`libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.1"`
 
-### Maven
+### Gradle
 
 ````
-<dependency>
-  <groupId>io.taig.android</groupId>
-  <artifactId>donut-progress</artifactId>
-  <version>1.0.0</version>
-  <type>aar</type>
-</dependency>
+dependencies {
+    compile 'io.taig.android:donut-progress:1.0.1@aar'
+}
 ````
 
 ## Usage

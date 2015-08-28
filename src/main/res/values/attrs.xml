@@ -16,6 +16,9 @@
         <attr format="integer"
               name="donut_progress_max" />
 
+        <attr format="integer"
+              name="donut_progress_startAngle" />
+
         <attr format="dimension"
               name="donut_progress_thickness" />
 
