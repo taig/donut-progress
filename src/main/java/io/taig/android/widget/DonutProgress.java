@@ -21,7 +21,7 @@ import static android.os.Build.VERSION_CODES.LOLLIPOP;
 /**
  * Circular progress widget
  */
-public class CircleProgress extends View {
+public class DonutProgress extends View {
     interface OnProgressChangedListener {
         String update( int current, int max );
     }
@@ -63,23 +63,23 @@ public class CircleProgress extends View {
 
     private RectF cacheRect = new RectF();
 
-    public CircleProgress( Context context ) {
+    public DonutProgress( Context context ) {
         super( context );
         init( context, null, 0, 0 );
     }
 
-    public CircleProgress( Context context, AttributeSet attrs ) {
+    public DonutProgress( Context context, AttributeSet attrs ) {
         super( context, attrs );
         init( context, attrs, 0, 0 );
     }
 
-    public CircleProgress( Context context, AttributeSet attrs, int defStyleAttr ) {
+    public DonutProgress( Context context, AttributeSet attrs, int defStyleAttr ) {
         super( context, attrs, defStyleAttr );
         init( context, attrs, defStyleAttr, 0 );
     }
 
     @TargetApi( LOLLIPOP )
-    public CircleProgress( Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes ) {
+    public DonutProgress( Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes ) {
         super( context, attrs, defStyleAttr, defStyleRes );
         init( context, attrs, defStyleAttr, defStyleRes );
     }
@@ -88,7 +88,7 @@ public class CircleProgress extends View {
     private void init( Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes ) {
         TypedValue value = new TypedValue();
         Resources.Theme theme = context.getTheme();
-        TypedArray array = theme.obtainStyledAttributes( attrs, R.styleable.CircleProgress, defStyleAttr, defStyleRes );
+        TypedArray array = theme.obtainStyledAttributes( attrs, R.styleable.DonutProgress, defStyleAttr, defStyleRes );
 
         try {
             int colorGrey;
@@ -109,30 +109,30 @@ public class CircleProgress extends View {
 
             this.progressPaint = new Paint( this.backgroundPaint );
 
-            this.progressColorStart = array.getColor( R.styleable.CircleProgress_donut_progress_colorStart, -1 );
+            this.progressColorStart = array.getColor( R.styleable.DonutProgress_donut_progress_colorStart, -1 );
 
             if( this.progressColorStart == -1 ) {
                 theme.resolveAttribute( R.attr.colorPrimary, value, true );
                 this.progressColorStart = value.data;
             }
 
-            this.progressColorEnd = array.getColor( R.styleable.CircleProgress_donut_progress_colorEnd, -1 );
+            this.progressColorEnd = array.getColor( R.styleable.DonutProgress_donut_progress_colorEnd, -1 );
 
             if( this.progressColorEnd == -1 ) {
                 theme.resolveAttribute( R.attr.colorPrimaryDark, value, true );
                 this.progressColorEnd = value.data;
             }
 
-            this.progressCurrent = array.getInt( R.styleable.CircleProgress_donut_progress_current, 0 );
+            this.progressCurrent = array.getInt( R.styleable.DonutProgress_donut_progress_current, 0 );
 
-            this.progressMax = array.getInt( R.styleable.CircleProgress_donut_progress_max, 100 );
+            this.progressMax = array.getInt( R.styleable.DonutProgress_donut_progress_max, 100 );
 
-            this.progressStartAngle = array.getInt( R.styleable.CircleProgress_donut_progress_startAngle, 0 );
+            this.progressStartAngle = array.getInt( R.styleable.DonutProgress_donut_progress_startAngle, 0 );
 
             theme.resolveAttribute( android.R.attr.textColor, value, true );
 
             this.labelColorDefault = array.getColor(
-                R.styleable.CircleProgress_donut_progress_labelColorDefault,
+                R.styleable.DonutProgress_donut_progress_labelColorDefault,
                 -1
             );
 
@@ -146,7 +146,7 @@ public class CircleProgress extends View {
             }
 
             this.labelColorEmpty = array.getColor(
-                R.styleable.CircleProgress_donut_progress_labelColorEmpty,
+                R.styleable.DonutProgress_donut_progress_labelColorEmpty,
                 colorGrey
             );
 
@@ -156,13 +156,13 @@ public class CircleProgress extends View {
             this.labelPaint.setAntiAlias( true );
             this.labelPaint.setTextAlign( Paint.Align.CENTER );
 
-            float labelSize = array.getDimension( R.styleable.CircleProgress_donut_progress_labelSize, -1 );
+            float labelSize = array.getDimension( R.styleable.DonutProgress_donut_progress_labelSize, -1 );
 
             if( labelSize != -1 ) {
                 setLabelSize( labelSize );
             }
 
-            float thickness = array.getDimension( R.styleable.CircleProgress_donut_progress_thickness, -1 );
+            float thickness = array.getDimension( R.styleable.DonutProgress_donut_progress_thickness, -1 );
 
             if( thickness != -1 ) {
                 setThickness( thickness );

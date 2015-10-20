@@ -1,7 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<manifest package="io.taig.android.donout_progress">
-
-	<application />
-
-</manifest>
+<manifest package="io.taig.android.donout_progress" />
