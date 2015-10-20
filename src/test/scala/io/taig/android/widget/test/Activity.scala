@@ -2,7 +2,7 @@ package io.taig.android.widget.test
 
 import android.os.Bundle
 import android.widget.FrameLayout
-import io.taig.android.widget.CircleProgress
+import io.taig.android.widget.DonutProgress
 
 class Activity extends android.app.Activity {
     override def onCreate( savedInstanceState: Bundle ) = {
@@ -11,7 +11,7 @@ class Activity extends android.app.Activity {
         setContentView {
             new FrameLayout( this ) {
                 addView {
-                    new CircleProgress( Activity.this ) {
+                    new DonutProgress( Activity.this ) {
                         setId( 1 )
                     }
                 }
