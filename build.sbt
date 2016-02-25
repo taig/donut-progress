@@ -2,6 +2,8 @@ androidBuildAar
 
 autoScalaLibrary := false
 
+githubProject := "donutprogress"
+
 javacOptions ++=
     "-source" :: "1.7" ::
     "-target" :: "1.7" ::
