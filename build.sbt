@@ -11,11 +11,15 @@ libraryDependencies ++=
     "com.android.support" % "appcompat-v7" % "23.1.0" ::
     Nil
 
+minSdkVersion := "7"
+
 name := "DonutProgress"
 
 normalizedName := "donut-progress"
 
 organization := "io.taig.android"
+
+platformTarget := "android-23"
 
 publishArtifact in ( Compile, packageDoc ) := false
 
@@ -25,5 +29,9 @@ scalacOptions ++=
     "-deprecation" ::
     "-feature" ::
     Nil
+
+targetSdkVersion := "23"
+
+typedResources := false
 
 version := "1.0.2"
