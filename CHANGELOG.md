@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Upgrade to appcompat-v7 1.0.3
+
 ## 1.0.2
 
 - Rename `CircleProgress` to `DonutProgress`

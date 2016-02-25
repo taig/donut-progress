@@ -8,13 +8,13 @@
 
 ### sbt
 
-`libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.2"`
+`libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.3"`
 
 ### Gradle
 
 ````
 dependencies {
-    compile 'io.taig.android:donut-progress:1.0.2@aar'
+    compile 'io.taig.android:donut-progress:1.0.3@aar'
 }
 ````
 
