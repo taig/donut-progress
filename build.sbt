@@ -10,7 +10,7 @@ javacOptions ++=
     Nil
 
 libraryDependencies ++=
-    "com.android.support" % "appcompat-v7" % "23.1.0" ::
+    "com.android.support" % "appcompat-v7" % "23.2.0" ::
     Nil
 
 minSdkVersion := "7"
