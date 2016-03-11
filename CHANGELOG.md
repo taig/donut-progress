@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.0.4
+
+- Upgrade to appcompat-v7 22.2.1
+
 ## 1.0.3
 
-- Upgrade to appcompat-v7 1.0.3
+- Upgrade to appcompat-v7 22.2.0
 
 ## 1.0.2
 
