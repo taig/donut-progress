@@ -10,7 +10,7 @@ javacOptions ++=
     Nil
 
 libraryDependencies ++=
-    "com.android.support" % "appcompat-v7" % "23.2.0" ::
+    "com.android.support" % "appcompat-v7" % "23.2.1" ::
     Nil
 
 minSdkVersion := "7"
@@ -24,8 +24,6 @@ organization := "io.taig.android"
 platformTarget := "android-23"
 
 publishArtifact in ( Compile, packageDoc ) := false
-
-scalaVersion := "2.11.7"
 
 scalacOptions ++=
     "-deprecation" ::
