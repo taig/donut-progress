@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6
+
+- Upgrade to appcompat-v7 23.4.0
+- Upgrade to sbt-android 1.6.2
+
 ## 1.0.5
 
 - Upgrade to appcompat-v7 23.3.0
