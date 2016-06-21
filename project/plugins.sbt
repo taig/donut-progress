@@ -1,3 +1,3 @@
 addSbtPlugin( "io.taig.sbt" % "sonatype" % "1.0.0" )
 
-addSbtPlugin( "org.scala-android" % "sbt-android" % "1.6.2" )
+addSbtPlugin( "org.scala-android" % "sbt-android" % "1.6.4" )
