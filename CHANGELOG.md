@@ -2,6 +2,11 @@
 
 ## 1.0.6
 
+- Upgrade to appcompat-v7 24.0.0
+- Upgrade to sbt-android 1.6.4
+
+## 1.0.6
+
 - Upgrade to appcompat-v7 23.4.0
 - Upgrade to sbt-android 1.6.2
 
