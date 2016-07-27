@@ -2,7 +2,7 @@ androidBuildAar
 
 autoScalaLibrary := false
 
-githubProject := "donutprogress"
+githubProject := "donut-progress"
 
 javacOptions ++=
     "-source" :: "1.7" ::
@@ -15,13 +15,11 @@ libraryDependencies ++=
 
 minSdkVersion := "7"
 
-name := "DonutProgress"
-
-normalizedName := "donut-progress"
+name := "donut-progress"
 
 organization := "io.taig.android"
 
-platformTarget := "android-23"
+platformTarget := "android-24"
 
 publishArtifact in ( Compile, packageDoc ) := false
 
@@ -30,7 +28,7 @@ scalacOptions ++=
     "-feature" ::
     Nil
 
-targetSdkVersion := "23"
+targetSdkVersion := "24"
 
 typedResources := false
 
