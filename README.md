@@ -1,22 +1,22 @@
 # DonutProgress
 
-> Circular ProgressBar for Android
+[![CircleCI](https://circleci.com/gh/Taig/donut-progress/tree/master.svg?style=shield)](https://circleci.com/gh/Taig/donut-progress/tree/master)
 
-[![Build Status](https://travis-ci.org/Taig/DonutProgress.svg?branch=master)](https://travis-ci.org/Taig/DonutProgress)
+> Circular ProgressBar for Android
 
 ## Download
 
 ### sbt
 
 ````scala
-libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.7"
+libraryDependencies += "io.taig.android" % "donut-progress" % "1.0.8"
 ````
 
 ### Gradle
 
 ````groovy
 dependencies {
-    compile 'io.taig.android:donut-progress:1.0.7@aar'
+    compile 'io.taig.android:donut-progress:1.0.8@aar'
 }
 ````
 
