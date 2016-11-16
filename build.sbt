@@ -1,4 +1,4 @@
-androidBuildAar
+enablePlugins( AndroidLib )
 
 autoScalaLibrary := false
 
