@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.10
+
+_2016-12-19_
+
+ * Upgrade to Android support library 25.1.0
+ * Upgrade to sbt-android 1.7.2
+
 ## 1.0.9
 
 _2016-11-16_
