@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0
+
+_2018-04-24_
+
+ * Upgrade to sbt-android 1.7.10
+ * Upgrade to android platform 27
+ * Upgrade to sbt 0.13.17
+
 ## 1.0.10
 
 _2016-12-19_

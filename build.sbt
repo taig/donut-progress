@@ -32,4 +32,4 @@ targetSdkVersion := "27"
 
 typedResources := false
 
-version := "1.0.10"
+version := "1.1.0"
