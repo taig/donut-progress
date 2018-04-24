@@ -10,7 +10,7 @@ javacOptions ++=
     Nil
 
 libraryDependencies ++=
-    "com.android.support" % "appcompat-v7" % "25.1.0" ::
+    "com.android.support" % "appcompat-v7" % "27.1.1" ::
     Nil
 
 minSdkVersion := "7"
@@ -19,7 +19,7 @@ name := "donut-progress"
 
 organization := "io.taig.android"
 
-platformTarget := "android-24"
+platformTarget := "android-27"
 
 publishArtifact in ( Compile, packageDoc ) := false
 
@@ -28,7 +28,7 @@ scalacOptions ++=
     "-feature" ::
     Nil
 
-targetSdkVersion := "24"
+targetSdkVersion := "27"
 
 typedResources := false
 
