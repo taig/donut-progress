@@ -1,4 +1,4 @@
-package io.taig.android.widget;
+package io.taig.android.dp;
 
 import android.annotation.TargetApi;
 import android.content.Context;
