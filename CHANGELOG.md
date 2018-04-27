@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+
+_2018-04-27_
+
+ * Remove illegal R class reference
+
 ## 1.1.1
 
 _2018-04-27_

@@ -9,14 +9,14 @@
 ### sbt
 
 ````scala
-libraryDependencies += "io.taig.android" % "donut-progress" % "1.1.1"
+libraryDependencies += "io.taig.android" % "donut-progress" % "1.1.2"
 ````
 
 ### Gradle
 
 ````groovy
 dependencies {
-    compile 'io.taig.android:donut-progress:1.1.1@aar'
+    compile 'io.taig.android:donut-progress:1.1.2@aar'
 }
 ````
 
