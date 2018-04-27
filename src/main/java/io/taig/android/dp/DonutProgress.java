@@ -14,7 +14,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
-import io.taig.android.donout_progress.R;
 
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
