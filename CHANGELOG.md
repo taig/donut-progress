@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+_2018-04-27_
+
+ * Move namespace from `io.taig.android.widget` to `io.taig.android.dp`
+
 ## 1.1.0
 
 _2018-04-24_
